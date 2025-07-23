@@ -1,3 +1,27 @@
+@media (max-width: 768px) {
+body {
+padding: 10px;
+}
+
+.container {
+height: calc(100vh - 40px);
+padding: 15px;
+}
+
+h1 {
+font-size: 1.6em;
+margin-bottom: 8px;
+}
+
+.description {
+font-size: 0.95em;
+margin-bottom: 10px;
+}
+
+iframe {
+min-height: 200px;
+}
+}
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -98,9 +122,7 @@
             transform: scale(1.05);
         }
 
-        footer {
-            display: none;
-        }
+
 
         @media (max-width: 768px) {
             body {
@@ -123,27 +145,32 @@
 
         @media (max-width: 480px) {
             body {
-                padding: 10px;
+                padding: 5px;
             }
 
             .container {
-                height: calc(100vh - 40px);
+                height: calc(100vh - 20px);
                 padding: 10px;
             }
 
             h1 {
-                font-size: 1.6em;
-                margin-bottom: 8px;
+                font-size: 1.4em;
+                margin-bottom: 5px;
             }
 
             .description {
-                font-size: 1em;
-                margin-bottom: 10px;
+                font-size: 0.9em;
+                margin-bottom: 8px;
             }
 
             iframe {
-                min-height: 200px;
-                margin-bottom: 10px;
+                min-height: 150px;
+                margin-bottom: 8px;
+            }
+
+            a.download-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
             }
         }
 
