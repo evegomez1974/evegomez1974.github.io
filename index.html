@@ -42,8 +42,8 @@
             border-radius: 15px;
             width: 100%;
             max-width: 800px;
-            height: calc(100vh - 100px);
-            /* Hauteur adaptative */
+            height: calc(100vh - 80px);
+            /* Moins d'espace nécessaire */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             animation: slideUp 0.8s ease-out;
             text-align: center;
@@ -99,14 +99,7 @@
         }
 
         footer {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 0.8em;
-            color: #eee;
-            white-space: nowrap;
+            display: none;
         }
 
         @media (max-width: 768px) {
@@ -115,7 +108,7 @@
             }
 
             .container {
-                height: calc(100vh - 80px);
+                height: calc(100vh - 60px);
                 padding: 15px;
             }
 
@@ -134,7 +127,7 @@
             }
 
             .container {
-                height: calc(100vh - 60px);
+                height: calc(100vh - 40px);
                 padding: 10px;
             }
 
@@ -190,10 +183,6 @@
             <a class="download-btn" href="CV_GOMEZ_Eve.pdf" target="_blank">📄 Télécharger le CV</a>
         </div>
     </div>
-
-    <footer>
-        &copy; 2025 Eve Gomez – Tous droits réservés
-    </footer>
 
 </body>
 
