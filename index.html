@@ -1,41 +1,200 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV en Ligne</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eve Gomez – CV en ligne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <style>
+        html,
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            /* Empêche le scroll */
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom, #317a8b 0%, #4fc8dc 35%, #f7f9fa 100%);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* Centré verticalement */
+            animation: fadeIn 1.2s ease-in;
+            padding: 20px;
+            /* Espacement minimal */
+        }
+
         .container {
-            background: white;
+            background-color: #fff;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border-radius: 15px;
+            width: 100%;
             max-width: 800px;
-            margin: auto;
+            height: calc(100vh - 100px);
+            /* Hauteur adaptative */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            animation: slideUp 0.8s ease-out;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
         }
+
+        h1 {
+            font-size: 2.2em;
+            margin: 0 0 10px 0;
+            color: #317a8b;
+            flex-shrink: 0;
+            /* Ne se réduit pas */
+        }
+
+        .description {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            flex-shrink: 0;
+            /* Ne se réduit pas */
+        }
+
         iframe {
             width: 100%;
-            height: 600px;
-            border: none;
+            flex: 1;
+            /* Prend tout l'espace disponible */
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            min-height: 300px;
+            /* Hauteur minimale */
+        }
+
+        .download-section {
+            flex-shrink: 0;
+            /* Ne se réduit pas */
+        }
+
+        a.download-btn {
+            display: inline-block;
+            background-color: #317a8b;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a.download-btn:hover {
+            background-color: #255e6c;
+            transform: scale(1.05);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 0.8em;
+            color: #eee;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                height: calc(100vh - 80px);
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            iframe {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                height: calc(100vh - 60px);
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+                margin-bottom: 8px;
+            }
+
+            .description {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            iframe {
+                min-height: 200px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        <h1>Mon CV en Ligne</h1>
-        <p>Voici mon CV en format PDF :</p>
+        <h1>Mon CV en ligne</h1>
+        <p class="description">Voici mon CV en format PDF :</p>
 
-        <iframe src="CV_GOMEZ_Eve.pdf"></iframe>
+        <iframe src="CV_GOMEZ_Eve.pdf#navpanes=0"></iframe>
 
-        <p>Si le document ne s'affiche pas, <a href="CV_GOMEZ_Eve.pdf" target="_blank">cliquez ici pour le télécharger</a>.</p>
+        <div class="download-section">
+            <a class="download-btn" href="CV_GOMEZ_Eve.pdf" target="_blank">📄 Télécharger le CV</a>
+        </div>
     </div>
 
+    <footer>
+        &copy; 2025 Eve Gomez – Tous droits réservés
+    </footer>
+
 </body>
+
 </html>
